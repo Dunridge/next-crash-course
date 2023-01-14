@@ -1,13 +1,16 @@
 import styles from "../src/styles/Layout.module.css";
+import Nav from "./Nav";
 
 // TODO: learn the type
-const Layout = ({ children } : any) => {
-  return <div className={styles.container}>
-    <h1>Hello</h1>
-    <main className={styles.main}>
-        { children }
-    </main>
-  </div>;
+const Layout = ({ children }: any) => {
+  return (
+    <>
+      <Nav />
+      <div className={styles.container}>
+        <main className={styles.main}>{children}</main>
+      </div>
+    </>
+  );
 };
 
 export default Layout;
