@@ -1,7 +1,9 @@
+import ArticleList from 'components/ArticleList';
 import Head from 'next/head'
 
 export default function Home({ articles }: any) {
   console.log(articles);
+  // TODO: see the type for the components
   
   return (
     <div>
@@ -9,7 +11,7 @@ export default function Home({ articles }: any) {
         <title>WebDev News</title>
         <meta name='keywords' content='web development, programming'/>
       </Head>
-      <h1>Welcome to Next</h1>
+      <ArticleList articles={articles}></ArticleList>
     </div>
   )
 }
